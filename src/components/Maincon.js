@@ -6,9 +6,11 @@ const Maincon = () => {
     console.log(videodata)
     if(!videodata) return
   return (
-    <div className='flex flex-wrap'>
+   <div className="flex justify-center ">
+     <div className='flex flex-wrap w-10/12'>
       {videodata.map((video,index)=>(<Videocard key={index} array={video}/>))}
     </div>
+   </div>
   )
 }
 
