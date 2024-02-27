@@ -8,7 +8,7 @@ const Maincon = () => {
   return (
    <div className="flex justify-center ">
      <div className='flex flex-wrap w-10/12'>
-      {videodata.map((video,index)=>(<Videocard key={index} array={video}/>))}
+      {videodata.map((video,index)=>(<Videocard key={index} array={video} uniqueID={index}/>))}
     </div>
    </div>
   )
