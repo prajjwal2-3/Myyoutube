@@ -4,35 +4,40 @@ import { addrecomvideo ,addrecomchannel} from "../Utils/Videoslice";
 import ListIcon from '@mui/icons-material/List';
 import {useDispatch} from 'react-redux'
 import useChanneldata from "../Utils/useChanneldata";
-import { APIKEY } from "../Utils/Constants";
+import { APIKEY, LOGO } from "../Utils/Constants";
+
+
+import Header2 from "./Header2";
+import PrimarySearchAppBar from "./Header2";
+
 const Header = () => {
     const dispatch = useDispatch();
    
       
    
     
-    useEffect(()=>{
-    youtube();
-    },[])
-      const youtube = async ()=>{
-        try{
-          const data= await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&&chart=mostPopular&regionCode=IN&key=${APIKEY}&maxResults=15`)
-          const json = await data.json();
-        const data1= await fetch(`https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics%2Cstatus&id=UCkWOpf05w9dPthQ-2tXndfA&key=${APIKEY}`)
-          const json1 = await data1.json();
-          console.log(json)
-          dispatch(addrecomvideo(json.items))
-          console.log(json1)
-          dispatch(addrecomchannel(json1.items))
+    // useEffect(()=>{
+    // youtube();
+    // },[])
+    //   const youtube = async ()=>{
+    //     try{
+    //       const data= await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&&chart=mostPopular&regionCode=IN&key=${APIKEY}&maxResults=16`)
+    //       const json = await data.json();
+    //     const data1= await fetch(`https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics%2Cstatus&id=UCkWOpf05w9dPthQ-2tXndfA&key=${APIKEY}`)
+    //       const json1 = await data1.json();
+    //       console.log(json)
+    //       dispatch(addrecomvideo(json.items))
+    //       console.log(json1)
+    //       dispatch(addrecomchannel(json1.items))
          
-         if(json && json.items){
-          dispatch(addrecomvideo(json.items))
-         }
-        }catch(error){
-          console.log(error)
-        }
+    //      if(json && json.items){
+    //       dispatch(addrecomvideo(json.items))
+    //      }
+    //     }catch(error){
+    //       console.log(error)
+    //     }
        
-      }
+    //   }
     const json=[
         {
             "kind": "youtube#searchResult",
@@ -540,22 +545,14 @@ const Header = () => {
         }
     ]
     
-    
-  return (
-    <div className="w-full p-2 flex  justify-between">
-      <div className="logo-options flex w-2/12">
-          <div className="options m-2 ">
+    dispatch(addrecomvideo(json))
+    console.log(json)
 
-            <ListIcon/>
-          </div>
-        <div className="logo  flex "><img 
-className='h-12 mr-2' src="https://cdn.mos.cms.futurecdn.net/8gzcr6RpGStvZFA2qRt4v6-1200-80.jpg" alt="logo"
- />
-        </div>
-      </div>
-      <div className="search bg-blue-600 w-8/12">search</div>
-      <div className="profile bg-red-600 w-2/12">profile</div>
-    </div>
+
+      
+     
+  return (
+   <PrimarySearchAppBar/>
   );
 };
 
