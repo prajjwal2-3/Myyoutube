@@ -16,6 +16,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import { LOGO } from '../Utils/Constants';
+import TemporaryDrawer from './Drawer';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -167,7 +168,8 @@ export default function PrimarySearchAppBar() {
             aria-label="open drawer"
             sx={{ mr: 2 }}
           >
-            <MenuIcon />
+            <TemporaryDrawer/>
+           
           </IconButton>
           <Typography
             variant="h6"
