@@ -10,18 +10,18 @@ import { APIKEY, LOGO } from "../Utils/Constants";
 import Header2 from "./Header2";
 import PrimarySearchAppBar from "./Header2";
 
+const channelid = "UCkWOpf05w9dPthQ-2tXndfA"
 const Header = () => {
     const dispatch = useDispatch();
-   
-      
-   
+    const channel = useChanneldata(channelid);
+ console.log(channel)
     
     // useEffect(()=>{
     // youtube();
     // },[])
     //   const youtube = async ()=>{
     //     try{
-    //       const data= await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&&chart=mostPopular&regionCode=IN&key=${APIKEY}&maxResults=16`)
+    //       const data= await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&&chart=mostPopular&regionCode=US&key=${APIKEY}&maxResults=16`)
     //       const json = await data.json();
     //     const data1= await fetch(`https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics%2Cstatus&id=UCkWOpf05w9dPthQ-2tXndfA&key=${APIKEY}`)
     //       const json1 = await data1.json();
@@ -546,13 +546,16 @@ const Header = () => {
     ]
     
     dispatch(addrecomvideo(json))
-    console.log(json)
+    
 
 
       
      
   return (
+  <>
    <PrimarySearchAppBar/>
+     </>
+   
   );
 };
 

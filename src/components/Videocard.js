@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
-import {  useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import useChanneldata from "../Utils/useChanneldata";
+
 const Videocard = ({ array, uniqueID }) => {
   // console.log(array);
+  const channelinfo = useChanneldata(array?.snippet?.channelId)
+console.log(channelinfo)
  
   const [auto, setauto] = useState(0);
 
@@ -41,9 +45,13 @@ const Videocard = ({ array, uniqueID }) => {
         )}
         <div className="">
           <div className=""></div>
-          <div className="w-72 h-12 p-2">
-            <div className="font-bold truncate text-white">{array?.snippet?.title}</div>
-            <div className=" truncate text-white opacity-85">{array?.snippet?.channelTitle}</div>
+          <div className=" flex">
+          <div className="w-10 h-10 mt-2">
+              <img src={channelinfo?.items[0]?.snippet?.thumbnails?.high?.url} className="rounded-full" alt="cant" />
+            </div>
+           <div className="w-72 h-12 p-2"> <div className="font-bold truncate text-white">{array?.snippet?.title}</div>
+            <div className=" truncate text-white opacity-85">{array?.snippet?.channelTitle}</div></div>
+           
           </div>
         </div>
       </div>

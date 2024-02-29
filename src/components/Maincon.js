@@ -4,7 +4,8 @@ import Videocard from './Videocard'
 const Maincon = () => {
     const videodata = useSelector((state)=>state.video?.recomvideo)
     const channeldata = useSelector((state)=>state.video?.recomchannel)
-    console.log(videodata)
+   console.log(videodata)
+    
     if(!videodata) return
   return (
    <div className="flex justify-center ">
