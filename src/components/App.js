@@ -31,7 +31,7 @@ export const appRouter = createBrowserRouter([
         element: <Maincon />
       },
       {
-        path: "/watch",
+        path: "/watch/:id",
         element: <Watchpage />,
       },
      
