@@ -14,7 +14,7 @@ console.log(ds)
         <div className="video aspect-video mt-5 mr-1 ">
    
   <iframe className='w-full h-5/6 rounded-xl' src={`https://www.youtube.com/embed/${id}?si=Xl13FNhU_b4gBdWZ&autoplay=1`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <h1 className='text-2xl text-white mt-2 font-bold'>{ds.items[0].snippet.title}</h1>
+        <h1 className='text-2xl text-white mt-2 font-bold'>{ds?.items[0]?.snippet?.title}</h1>
         </div>
         <div className="comment"></div>
       </div>
