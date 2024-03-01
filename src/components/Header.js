@@ -9,13 +9,15 @@ import { APIKEY, APIKEY2, APIKEY3, LOGO } from "../Utils/Constants";
 
 import Header2 from "./Header2";
 import PrimarySearchAppBar from "./Header2";
+import useCateg from "../Utils/useCateg";
 
 const channelid = "UCkWOpf05w9dPthQ-2tXndfA"
 const Header = () => {
     const dispatch = useDispatch();
     const channel = useChanneldata(channelid);
  console.log(channel)
-    
+    const categ = useCateg();
+    console.log(categ)
     useEffect(()=>{
     youtube();
     },[])
