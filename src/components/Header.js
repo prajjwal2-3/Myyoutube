@@ -15,9 +15,9 @@ const channelid = "UCkWOpf05w9dPthQ-2tXndfA"
 const Header = () => {
     const dispatch = useDispatch();
     const channel = useChanneldata(channelid);
- console.log(channel)
+//  console.log(channel)
     const categ = useCateg();
-    console.log(categ)
+    // console.log(categ)
     useEffect(()=>{
     youtube();
     },[])
