@@ -2,13 +2,19 @@ import React from "react";
 import { useParams } from "react-router-dom";
 
 import useSinle from "../Utils/useSinle";
+import { useSelector } from "react-redux";
 
 const Watchpage = () => {
   const { id } = useParams();
   const ds = useSinle(id);
   console.log(ds);
+const channels = useSelector((state)=>state?.video?.recomchannel)
 
- 
+if(ds && channels){
+  console.log(channels)
+   const ch = channels.filter((c)=>c.items[0] && c.items[0].id===ds.items[0].snippet.channelId)
+ console.log(ch)
+}
   return (
     <div className="flex justify-center">
       <div className="flex  w-11/12 ">
