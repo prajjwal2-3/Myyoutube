@@ -2,9 +2,9 @@ import React from 'react'
 
 const Error = () => {
   return (
-    <div>
-      ointho
-    </div>
+    
+       <h1>There was something wrong,please check reload!!!</h1>
+    
   )
 }
 

@@ -21,9 +21,9 @@ if(ch===undefined)return
 console.log(ch)
   return (
     <div className="flex justify-center ">
-      <div className="flex flex-col sm:flex-row w-11/12   ">
+      <div className="flex flex-col sm:flex-row sm:w-11/12 w-full   ">
         <div className="video-comment sm:w-8/12 w-full h-screen ">
-          <div className="video aspect-video mt-3 sm:mt-5 sm:mr-1 ">
+          <div className="video aspect-video  sm:mt-5 sm:mr-1 ">
             <iframe
               className="w-full h-5/6 rounded-xl"
               src={`https://www.youtube.com/embed/${id}?si=Xl13FNhU_b4gBdWZ&autoplay=1`}
