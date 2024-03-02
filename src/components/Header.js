@@ -18,17 +18,17 @@ const Header = () => {
   const youtube = async () => {
     try {
       const data = await fetch(
-        `https://www.googleapis.com/youtube/v3/search?part=snippet&&chart=mostPopular&regionCode=IN&key=${APIKEY3}&maxResults=40`
+        `https://www.googleapis.com/youtube/v3/search?part=snippet&&chart=mostPopular&regionCode=IN&key=${APIKEY3}&maxResults=5`
       );
       const json = await data.json();
 
-      console.log(json);
+      // console.log(json);
       dispatch(addrecomvideo(json.items));
 
       if (json && json.items) {
         dispatch(addrecomvideo(json.items));
       }
-      console.log(json.items)
+      // console.log(json.items)
     
       
     } catch (error) {
