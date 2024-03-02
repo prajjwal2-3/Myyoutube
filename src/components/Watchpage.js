@@ -1,20 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 
 import useSinle from "../Utils/useSinle";
 import { useSelector } from "react-redux";
 
 const Watchpage = () => {
+  
   const { id } = useParams();
   const ds = useSinle(id);
   console.log(ds);
-const channels = useSelector((state)=>state?.video?.recomchannel)
+  const channels = useSelector((state)=>state?.video?.recomchannel)
+  if(ds===undefined) return
 
-if(ds && channels){
-  console.log(channels)
-   const ch = channels.filter((c)=>c.items[0] && c.items[0].id===ds.items[0].snippet.channelId)
- console.log(ch)
-}
+
+  // console.log(channels)
+   const ch = channels.filter((c)=>c.items[0] && c.items[0].id===ds?.items[0]?.snippet?.channelId)
+ 
+ 
+if(ch===undefined)return
+console.log(ch)
   return (
     <div className="flex justify-center">
       <div className="flex  w-11/12 ">
@@ -31,9 +35,15 @@ if(ds && channels){
             <h1 className="text-2xl text-white mt-2 font-bold">
               {ds?.items[0]?.snippet?.title}
             </h1>
-            {/* {channel==!"undefined"(<div className="w-10 h-10 mt-2">
-             <img src={channel?.items[0]?.snippet?.thumbnails?.high?.url} className="rounded-full" alt="cant" />
-           </div>)} */}
+            
+            <div className="w-10 h-10 mt-2">
+              <img
+                src={ch[0]?.items[0]?.snippet?.thumbnails?.high?.url}
+                className="rounded-full"
+                alt="cant"
+              />
+            </div>
+            
           </div>
           <div className="comment"></div>
         </div>
