@@ -60,7 +60,7 @@ if(playerElement){
               alt="cant"
               
             />
-            {console.log(channelinfo?.items[0]?.snippet?.thumbnails?.high?.url)}
+            
           </div>
             <div className="w-72 h-12 p-2">
               {" "}
