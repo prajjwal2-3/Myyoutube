@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { APIKEY3 } from "../Utils/Constants";
 import { addwatchpagerecom } from "../Utils/Videoslice";
 import Watchrecom from "./Watchrecom";
+import Videocard from "./Videocard";
 
 const Watchpage = () => {
   const dispatch=useDispatch()
@@ -101,8 +102,8 @@ function formatSubscriberCount(subscriberCount) {
            </div>
           <div className="comment"></div>
         </div>
-        <div className="recommended w-4/12 text-white  ">
-          <Watchrecom/>
+        <div className="recommended sm:w-4/12 w-full mt-5 text-white  ">
+          <div className="flex justify-center"><Watchrecom/></div>
         </div>
       </div>
     </div>

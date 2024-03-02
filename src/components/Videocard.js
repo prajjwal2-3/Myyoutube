@@ -5,7 +5,7 @@ import useChanneldata from "../Utils/Channeldata";
 const Videocard = ({ array, uniqueID }) => {
   // console.log(array);
   const channelinfo = useChanneldata(array?.snippet?.channelId);
-  // console.log(channelinfo)
+  console.log(channelinfo)
 
   const [auto, setauto] = useState(0);
 
@@ -13,7 +13,7 @@ const Videocard = ({ array, uniqueID }) => {
     const playerElement = document.getElementsByClassName(
       `player-${uniqueID}`
     )[0];
-
+if(playerElement){
     const handleMouseOver = () => {
       setauto(1);
     };
@@ -24,7 +24,13 @@ const Videocard = ({ array, uniqueID }) => {
 
     playerElement.addEventListener("mouseover", handleMouseOver);
     playerElement.addEventListener("mouseout", handleMouseOut);
+  }
   }, []);
+  if(!channelinfo){
+    return(
+      <div className="">Loading recommended channel</div>
+    )
+  }
   return (
     <div className="mb-14">
       <div className={`aspect-video sm:m-2 mx-0 player-${uniqueID}`}>
@@ -46,13 +52,16 @@ const Videocard = ({ array, uniqueID }) => {
         <div className="">
           <div className=""></div>
           <div className=" flex">
+            
             <div className="w-10 h-10 mt-2">
-              <img
-                src={channelinfo?.items[0]?.snippet?.thumbnails?.high?.url}
-                className="rounded-full"
-                alt="cant"
-              />
-            </div>
+            <img
+              src={channelinfo?.items[0]?.snippet?.thumbnails?.high?.url}
+              className="rounded-full"
+              alt="cant"
+              
+            />
+            {console.log(channelinfo?.items[0]?.snippet?.thumbnails?.high?.url)}
+          </div>
             <div className="w-72 h-12 p-2">
               {" "}
               <div className="font-bold truncate text-white">

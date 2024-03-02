@@ -8,7 +8,7 @@ const recomchannel = useSelector((state)=>state?.video?.watchpagerecom)
 console.log(recomchannel)
 if(recomchannel===undefined) return
   return (
-    <div>
+    <div className='w-72'>
       {recomchannel.map((video,index)=>
      ( <Videocard key={index} array={video} uniqueID={index}/>)
       )}
