@@ -23,7 +23,7 @@ console.log(ch)
     <div className="flex justify-center ">
       <div className="flex flex-col sm:flex-row w-11/12   ">
         <div className="video-comment sm:w-8/12 w-full h-screen ">
-          <div className="video aspect-video mt-5 mr-1 ">
+          <div className="video aspect-video mt-3 sm:mt-5 sm:mr-1 ">
             <iframe
               className="w-full h-5/6 rounded-xl"
               src={`https://www.youtube.com/embed/${id}?si=Xl13FNhU_b4gBdWZ&autoplay=1`}
@@ -35,8 +35,7 @@ console.log(ch)
             <h1 className="text-2xl text-white mt-2 font-bold">
               {ds?.items[0]?.snippet?.title}
             </h1>
-            
-         <div className=" flex">
+            <div className=" flex">
          <div className="w-10 h-10 mt-2 m-1">
               <img
                 src={ch[0]?.items[0]?.snippet?.thumbnails?.high?.url}
@@ -48,8 +47,7 @@ console.log(ch)
               <h5>{ch[0]?.items[0]?.snippet?.title}</h5>
             </div>
          </div>
-            
-          </div>
+           </div>
           <div className="comment"></div>
         </div>
         <div className="recommended w-4/12 text-white ">j</div>
