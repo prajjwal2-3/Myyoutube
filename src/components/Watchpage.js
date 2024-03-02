@@ -20,9 +20,9 @@ const Watchpage = () => {
 if(ch===undefined)return
 console.log(ch)
   return (
-    <div className="flex justify-center">
-      <div className="flex  w-11/12 ">
-        <div className="video-comment w-8/12 h-screen ">
+    <div className="flex justify-center ">
+      <div className="flex flex-col sm:flex-row w-11/12   ">
+        <div className="video-comment sm:w-8/12 w-full h-screen ">
           <div className="video aspect-video mt-5 mr-1 ">
             <iframe
               className="w-full h-5/6 rounded-xl"
@@ -52,7 +52,7 @@ console.log(ch)
           </div>
           <div className="comment"></div>
         </div>
-        <div className="recommended w-4/12 ">j</div>
+        <div className="recommended w-4/12 text-white ">j</div>
       </div>
     </div>
   );
