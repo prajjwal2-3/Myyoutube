@@ -1,11 +1,12 @@
 
 
 
-export const APIKEY = "AIzaSyB_bjlIYeeDmGlYNYwoLt7htxHagFCIvzY"
+// export const APIKEY = "AIzaSyB_bjlIYeeDmGlYNYwoLt7htxHagFCIvzY"
 
-export const APIKEY2 = "AIzaSyCisdH5vjEFhRtyQPGzmh-pztQhgJPBGxg"
+// export const APIKEY2 = "AIzaSyCisdH5vjEFhRtyQPGzmh-pztQhgJPBGxg"
 
-export const APIKEY3 = "AIzaSyDaYOvtKdmH5SKCKnQZ4uBzuJKGmvzu0jE"
+export const APIKEY4 = "AIzaSyDaYOvtKdmH5SKCKnQZ4uBzuJKGmvzu0jE"
+export const APIKEY3 = "AIzaSyDeXpZVswvN4A-w9RaDZgyUUvK-av_LFdw"
 export const categ = ["Cricket","Shorts","Movies","Sports","Vlogs","Gaming","Factories","Music","Electric","Live","History","Mixes","Film",
 "Animation",
 "Autos",

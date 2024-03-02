@@ -1,23 +1,18 @@
-
-
-import './App.css';
-import Header from './Header';
-import Maincon from './Maincon';
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import Watchpage from './Watchpage';
-import { Provider } from 'react-redux';
-import { store } from '../Utils/Appstore';
-import Error from './Error';
+import "./App.css";
+import Header from "./Header";
+import Maincon from "./Maincon";
+import { createBrowserRouter, Outlet } from "react-router-dom";
+import Watchpage from "./Watchpage";
+import { Provider } from "react-redux";
+import { store } from "../Utils/Appstore";
+import Error from "./Error";
 function App() {
- 
- 
   return (
     <Provider store={store}>
-    <div className="App bg-zinc-900">
-       <Header/>
+      <div className="App bg-zinc-900">
+        <Header />
         <Outlet />
-      
-    </div>
+      </div>
     </Provider>
   );
 }
@@ -28,17 +23,15 @@ export const appRouter = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Maincon />
+        element: <Maincon />,
       },
       {
         path: "/watch/:id",
         element: <Watchpage />,
       },
-     
-      
     ],
-        errorElement: <Error/>
+    errorElement: <Error />,
   },
-])
+]);
 
 export default App;

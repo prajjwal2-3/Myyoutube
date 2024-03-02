@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { APIKEY } from './Constants';
+import { APIKEY3 } from './Constants';
 
-const useChanneldata = (prop) => {
+const Channeldata = (prop) => {
   const [data, setData] = useState();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics%2Cstatus&id=${prop}&key=${APIKEY}`
+          `https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics%2Cstatus&id=${prop}&key=${APIKEY3}`
         );
         const json = await response.json();
         setData(json); 
@@ -20,4 +20,4 @@ const useChanneldata = (prop) => {
   }, []); 
   return data; 
 };
-export default useChanneldata;
+export default Channeldata;
