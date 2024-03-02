@@ -27,7 +27,7 @@ const Videocard = ({ array, uniqueID }) => {
   }, []);
   return (
     <div className="mb-14">
-      <div className={`aspect-video m-2 player-${uniqueID}`}>
+      <div className={`aspect-video sm:m-2 mx-0 player-${uniqueID}`}>
         {auto === 1 ? (
           <iframe
             className={`rounded-xl w-80 h-48`}

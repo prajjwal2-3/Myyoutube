@@ -32,7 +32,7 @@ console.log(ch)
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen
             ></iframe>
-            <h1 className="text-2xl text-white mt-2 sm:mx-0 mx-2 font-bold">
+            <h1 className="text-xl sm:text-2xl text-white mt-2 sm:mx-0 mx-2 font-bold">
               {ds?.items[0]?.snippet?.title}
             </h1>
             <div className=" flex">
@@ -43,8 +43,8 @@ console.log(ch)
                 alt="cant"
               />
             </div>
-            <div className=" mt-2 m-1 text-white">
-              <h5>{ch[0]?.items[0]?.snippet?.title}</h5>
+            <div className=" mt-2 m-1 text-white ">
+              <h5 className="text-sm">{ch[0]?.items[0]?.snippet?.title}</h5>
             </div>
          </div>
            </div>

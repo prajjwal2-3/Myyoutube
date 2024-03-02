@@ -62,7 +62,7 @@ const Maincon = () => {
           </button>
         ))}
       </div>
-      <div className="flex flex-wrap sm:w-11/12 w-full sm:mx-auto justify-center ">
+      <div className="flex flex-wrap sm:w-11/12 w-full mt-2  sm:mx-auto justify-center ">
         {videoRecommendations.map((video, index) => (
           <Link to={"/watch/" + video.id?.videoId} className="  no-underline">
             <Videocard key={index} array={video} uniqueID={index} />
