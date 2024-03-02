@@ -36,13 +36,18 @@ console.log(ch)
               {ds?.items[0]?.snippet?.title}
             </h1>
             
-            <div className="w-10 h-10 mt-2">
+         <div className=" flex">
+         <div className="w-10 h-10 mt-2 m-1">
               <img
                 src={ch[0]?.items[0]?.snippet?.thumbnails?.high?.url}
                 className="rounded-full"
                 alt="cant"
               />
             </div>
+            <div className=" mt-2 m-1 text-white">
+              <h5>{ch[0]?.items[0]?.snippet?.title}</h5>
+            </div>
+         </div>
             
           </div>
           <div className="comment"></div>
