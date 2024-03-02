@@ -25,18 +25,18 @@ console.log(ch)
         <div className="video-comment sm:w-8/12 w-full h-screen ">
           <div className="video aspect-video  sm:mt-5 sm:mr-1 ">
             <iframe
-              className="w-full h-5/6 rounded-xl"
+              className="w-full h-5/6 sm:rounded-xl rounded-none shadow-md"
               src={`https://www.youtube.com/embed/${id}?si=Xl13FNhU_b4gBdWZ&autoplay=1`}
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen
             ></iframe>
-            <h1 className="text-2xl text-white mt-2 font-bold">
+            <h1 className="text-2xl text-white mt-2 sm:mx-0 mx-2 font-bold">
               {ds?.items[0]?.snippet?.title}
             </h1>
             <div className=" flex">
-         <div className="w-10 h-10 mt-2 m-1">
+         <div className="w-10 h-10 mt-2 m-1 sm:mx-0 mx-2">
               <img
                 src={ch[0]?.items[0]?.snippet?.thumbnails?.high?.url}
                 className="rounded-full"

@@ -52,7 +52,7 @@ const Maincon = () => {
 
   return (
     <>
-      <div className="w-11/12 flex justify-start ml-8 mt-2 overflow-auto">
+      <div className="sm:w-11/12 w-full flex justify-start sm:ml-8 ml-1  mt-2 overflow-auto">
         {categ.map((categ, index) => (
           <button
             key={index}
@@ -62,7 +62,7 @@ const Maincon = () => {
           </button>
         ))}
       </div>
-      <div className="flex flex-wrap w-11/12 mx-auto justify-center ">
+      <div className="flex flex-wrap sm:w-11/12 w-full sm:mx-auto justify-center ">
         {videoRecommendations.map((video, index) => (
           <Link to={"/watch/" + video.id?.videoId} className="  no-underline">
             <Videocard key={index} array={video} uniqueID={index} />
