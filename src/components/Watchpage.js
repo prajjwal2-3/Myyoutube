@@ -2,14 +2,13 @@ import React from "react";
 import { useParams } from "react-router-dom";
 
 import useSinle from "../Utils/useSinle";
-import useChanneldata from "../Utils/Channeldata";
+
 const Watchpage = () => {
   const { id } = useParams();
   const ds = useSinle(id);
   console.log(ds);
 
-  const channel = useChanneldata(ds?.items[0].snippet?.channelId);
-  console.log(channel);
+ 
   return (
     <div className="flex justify-center">
       <div className="flex  w-11/12 ">
