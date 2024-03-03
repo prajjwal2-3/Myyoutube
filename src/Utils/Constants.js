@@ -8,7 +8,7 @@ export const APIKEY3 = "AIzaSyCisdH5vjEFhRtyQPGzmh-pztQhgJPBGxg"
 // export const APIKEY3 = "AIzaSyDaYOvtKdmH5SKCKnQZ4uBzuJKGmvzu0jE"
 export const APIKEY4 = "AIzaSyDeXpZVswvN4A-w9RaDZgyUUvK-av_LFdw"
 // export const APIKEY3 = "AIzaSyCd-YmirSMYqiobWoh-LHtxhIpMA1HUumI"
-export const categ = ["Cricket","Shorts","Movies","Sports","Vlogs","Gaming","Factories","Music","Electric","Live","History","Mixes","Film",
+export const categ = ["Cricket","Shorts","Movies","Sports","Vlogs","Gamin","Factories","Music","Electric","Live","History","Mixes","Film",
 "Animation",
 "Autos",
 "Music",
