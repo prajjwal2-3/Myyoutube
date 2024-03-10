@@ -8,8 +8,8 @@ import PrimarySearchAppBar from "./Header2";
 import AI from "./AI";
 const Header = () => {
   const dispatch = useDispatch();
-  // Rsh();
-  AI();
+  
+  
   useEffect(() => {
     youtube();
    

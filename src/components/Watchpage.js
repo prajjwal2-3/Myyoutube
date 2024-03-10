@@ -1,22 +1,32 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-
+import Rsh from "./Rsh";
+import AI from "./AI";
 import useSinle from "../Utils/useSinle";
 import { useDispatch, useSelector } from "react-redux";
 import { APIKEY3 } from "../Utils/Constants";
 import { addwatchpagerecom } from "../Utils/Videoslice";
 import Watchrecom from "./Watchrecom";
-import Videocard from "./Videocard";
+
+
 
 const Watchpage = () => {
+  
+
   const dispatch=useDispatch()
   const { id } = useParams();
   const ds = useSinle(id);
   // console.log(ds);
+ 
   const channels = useSelector((state)=>state?.video?.recomchannel)
+  if(id===undefined)return
+  console.log(id)
+  Rsh(id)
+  AI();
   if(ds===undefined) return
-
-
+ 
+  
+  
   // console.log(channels)
    const ch = channels.filter((c)=>c.items[0] && c.items[0].id===ds?.items[0]?.snippet?.channelId)
  
@@ -29,6 +39,7 @@ const recomlist=async()=>{
      const data = await fetch(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=10&regionCode=US&videoCategoryId=${categId}&key=${APIKEY3}`);
      const json = await data.json();
     //  console.log(json)
+   
      dispatch(addwatchpagerecom(json.items))
   }catch(error){
 console.log(error)

@@ -3,8 +3,10 @@ import { useSelector } from 'react-redux'
 import Videocard from './Videocard'
 
 const Watchrecom = () => {
+  
 
 const recomchannel = useSelector((state)=>state?.video?.watchpagerecom)
+
 // console.log(recomchannel)
 if(recomchannel===undefined) return
   return (

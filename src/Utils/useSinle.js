@@ -1,11 +1,18 @@
 
 import { useState,useEffect } from 'react';
 import { APIKEY3 } from './Constants';
+import Rsh from '../components/Rsh';
+import AI from '../components/AI';
 const useSinle = (id) => {
+ 
     const [data, setData] = useState();
+
+   
     console.log(id)
     useEffect(() => {
+      
       const fetchData = async () => {
+       
         try {
           const response = await fetch(
             `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${id}&key=${APIKEY3}`

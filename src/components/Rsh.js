@@ -4,14 +4,17 @@ import { addsub } from '../Utils/Videoslice';
 import { useDispatch } from 'react-redux';
 // import {RsnChat} from 'rsnchat'
 
-const Rsh = () => {
+const Rsh = (id) => {
   const [data,setdata]=useState();
   const dispatch = useDispatch();
-  
+  console.log(id)
  
   const sub = async ()=>{
+   
+    console.log(id)
     try{
-      var subtitles = await get_subtitles_for_video("o7L5mjrI7w4");
+      if(id===undefined)return
+      var subtitles = await get_subtitles_for_video(id,"en");
       // var languages = await get_available_languages("8MofNRuTRRM");
       var sub = subtitles?.map(c=>c.text).join(" ")
       setdata(sub);
@@ -29,7 +32,7 @@ const Rsh = () => {
   
   return (
     <div>
-      
+      f
     </div>
   )
 }
