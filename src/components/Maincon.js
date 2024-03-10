@@ -39,15 +39,15 @@ const Maincon = () => {
         );
 
         dispatch(addrecomchannel(filteredChannelInfos));
-        console.log("added");
+        // console.log("added");
       } else {
-        console.log("No video recommendations found");
+        // console.log("No video recommendations found");
       }
     };
 
     fetchData();
   } else {
-    console.log("No video recommendations found");
+    // console.log("No video recommendations found");
   }
 
   return (

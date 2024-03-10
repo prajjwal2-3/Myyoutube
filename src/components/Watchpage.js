@@ -12,7 +12,7 @@ const Watchpage = () => {
   const dispatch=useDispatch()
   const { id } = useParams();
   const ds = useSinle(id);
-  console.log(ds);
+  // console.log(ds);
   const channels = useSelector((state)=>state?.video?.recomchannel)
   if(ds===undefined) return
 
@@ -22,13 +22,13 @@ const Watchpage = () => {
  
  
 if(ch===undefined)return
-console.log(ch)
+// console.log(ch)
 const categId = ds?.items[0]?.snippet?.categoryId;
 const recomlist=async()=>{
   try{
      const data = await fetch(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=10&regionCode=US&videoCategoryId=${categId}&key=${APIKEY3}`);
      const json = await data.json();
-     console.log(json)
+    //  console.log(json)
      dispatch(addwatchpagerecom(json.items))
   }catch(error){
 console.log(error)

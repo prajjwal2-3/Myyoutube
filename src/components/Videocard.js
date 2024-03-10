@@ -5,7 +5,7 @@ import useChanneldata from "../Utils/Channeldata";
 const Videocard = ({ array, uniqueID }) => {
   // console.log(array);
   const channelinfo = useChanneldata(array?.snippet?.channelId);
-  console.log(channelinfo)
+  // console.log(channelinfo)
 
   const [auto, setauto] = useState(0);
 

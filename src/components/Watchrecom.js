@@ -5,7 +5,7 @@ import Videocard from './Videocard'
 const Watchrecom = () => {
 
 const recomchannel = useSelector((state)=>state?.video?.watchpagerecom)
-console.log(recomchannel)
+// console.log(recomchannel)
 if(recomchannel===undefined) return
   return (
     <div className='w-96 sm:w-72'>
