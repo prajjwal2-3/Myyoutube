@@ -5,7 +5,7 @@ import axios from 'axios'
 const AI = () => {
     const addtodo = () => {
         axios
-          .get("https://localhost:3001/api/",)
+          .get("http://localhost:3001/api",)
           .then((Response) => {
             console.log(Response);
           })
