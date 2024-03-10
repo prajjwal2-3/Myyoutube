@@ -1,6 +1,7 @@
 import React from 'react'
 import {  useSelector } from 'react-redux';
 import { RsnChat } from 'rsnchat';
+import axios from 'axios'
 const AI = () => {
     const addtodo = () => {
         axios
@@ -12,7 +13,7 @@ const AI = () => {
           .catch((error) => console.error("Error adding todo:", error));
       };
       addtodo();
-}
+
 
   return (
     <div>
@@ -20,5 +21,5 @@ const AI = () => {
     </div>
   )
 
-
+  }
 export default AI
