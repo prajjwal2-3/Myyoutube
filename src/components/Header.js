@@ -7,10 +7,13 @@ import Rsh from "./Rsh";
 
 import { APIKEY3, cookie } from "../Utils/Constants";
 import PrimarySearchAppBar from "./Header2";
+import sum from "./AI";
+import AI from "./AI";
 // import { cookie } from "../Utils/Constants";
 const Header = () => {
   const dispatch = useDispatch();
   Rsh();
+  AI();
   useEffect(() => {
     youtube();
    
