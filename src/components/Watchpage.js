@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Rsh from "./Rsh";
 import AI from "./AI";
@@ -7,22 +7,36 @@ import { useDispatch, useSelector } from "react-redux";
 import { APIKEY3 } from "../Utils/Constants";
 import { addwatchpagerecom } from "../Utils/Videoslice";
 import Watchrecom from "./Watchrecom";
+import axios from "axios";
 
 
 
 const Watchpage = () => {
-  
-
-  const dispatch=useDispatch()
+    const dispatch=useDispatch()
   const { id } = useParams();
   const ds = useSinle(id);
-  // console.log(ds);
- 
-  const channels = useSelector((state)=>state?.video?.recomchannel)
-  if(id===undefined)return
-  console.log(id)
-  Rsh(id)
-  AI();
+     const channels = useSelector((state)=>state?.video?.recomchannel)
+     useEffect(()=>{
+      if(id===undefined)return
+      callser(id)
+     },[id])
+  
+function callser(id){
+  axios
+    .post("http://localhost:3001/api",{text:id})
+    .then((Response) => {
+        console.log(Response.data);
+      })
+     .catch(error => {
+        console.error('Error:', error); 
+     });
+}
+  
+      
+       
+    
+
+  
   if(ds===undefined) return
  
   
