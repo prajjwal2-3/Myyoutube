@@ -19,8 +19,7 @@ const Rsh = (id) => {
       var sub = subtitles?.map(c=>c.text).join(" ")
       setdata(sub);
       dispatch(addsub(data))
-      // console.log(sub)
-      // console.log(languages)
+     
    
 
     }
